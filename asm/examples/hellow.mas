@@ -1,0 +1,49 @@
+# =====================================================
+# Helloworld!
+# =====================================================
+
+# Filling the screen
+cp		57 d3			# first screen color
+cp		8769 d1
+.fill_screen_begin
+sb		d1 2
+cp		ll d1
+pt		d1 d3
+ig		d1 512
+ju		ll fill_screen_begin
+ju		d4 moar_final
+
+# "Hello World" text
+pt		3680 72	#H
+pt		3682 69	#E
+pt		3684 76	#L
+pt		3686 76	#L
+pt		3688 79	#O
+pt		3692 87	#W
+pt		3694 79	#O
+pt		3696 82	#R
+pt		3698 76	#L
+pt		3700 68	#D
+pt		3702 33	#!
+
+ex		2	# update screen
+
+# Waiting for pressing SPACE key
+.wait_keyb
+gt		160				# key num to use
+ju		ll final
+cp		wait_keyb cc
+
+# Redrawing the screen again
+.final
+cp		1 d4
+cp		14 d3			# final screen color
+cp		8769 d1
+cp		fill_screen_begin cc
+
+.moar_final
+ex		2	# update screen
+gg			# halt
+
+# medvedx64, 2013 09 07
+

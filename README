@@ -1,0 +1,3 @@
+Medvedish Architecture Virtual Machine (MarchVM)
+This is my experiment of creating own simple 16-bit microprocessor architecture and writing it's emulator — it is done just for fun.
+All source texts here comes under the terms of MIT license.
